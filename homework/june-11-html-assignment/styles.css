@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin: 80px auto 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Form */
+.form-container {
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.form-container input:not([type="checkbox"]) {
+    width: 100%;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left: 12px;
+}
+
+.form-container input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: rgb(110, 210, 240);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-container input[type="tel"],
+.form-container input[type="email"],
+.form-container .terms-container {
+    grid-column: span 2;
+}
+
+.terms-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ 
+.form-container .agree-checkbox {
+    flex: 1;
+    font-size: 14px;
+    display: inline;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-container p {
+    flex: 3;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.form-container p a {
+    text-decoration: none;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}
+
+.form-container button {
+    height: 40px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.terms-container p strong {
+    background-color: #3582c4;
+    color: white;
+    padding: 3px 7px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+}
+
+.register-btn {
+    background-color: #3582c4;
+}
+
+.register-btn:hover {
+    background-color: #4f94d4;
+}
+
+.sign-in-btn {
+    background-color: #00a32a;
+}
+
+.sign-in-btn:hover {
+    background-color: #00ba37;
+}
+
+/* Footer */
+footer {
+    margin: auto auto 20px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+footer,
+footer p:first-of-type::before {
+    width: 85vw;
+    max-width: 550px;
+}
+
+footer p:first-of-type::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: black;
+    margin: 0 auto 1em;
+}
+
+/* Media Queries for Tablets and Desktop */
+@media (min-width: 768px) {
+    .form-container {
+        width: 50%;
+        max-width: 550px;
+        gap: 1em 1.5em;
+    }
+
+    .form-container input::placeholder {
+        font-size: 15px;
+    }
+}
